@@ -23,8 +23,8 @@ When you log in to Phonebook with the same account on another device, you can se
 https://youtu.be/01q8oSUQCEQ
 ## Screenshots
 
-![Phonebook Index Screenshot](https://github.com/Mathesu-veLi/Projeto-Agenda/blob/main/Screenshots/index.png)
-![Phonebook Register/Login Screenshot](https://github.com/Mathesu-veLi/Projeto-Agenda/blob/main/Screenshots/register_login.png)
+![Phonebook Index Screenshot](https://github.com/Mathesu-veLi/Phonebook/blob/main/Screenshots/index.png)
+![Phonebook Register/Login Screenshot](https://github.com/Mathesu-veLi/Phonebook/blob/main/Screenshots/register_login.png)
 ## Explain the project
 
 Parts of the code that I think are important to explain
