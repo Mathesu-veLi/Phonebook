@@ -21,6 +21,10 @@ When you log in to Phonebook with the same account on another device, you can se
 #### Video Demo:
 
 https://youtu.be/01q8oSUQCEQ
+## Screenshots
+
+![Phonebook Index Screenshot](https://github.com/Mathesu-veLi/Projeto-Agenda/blob/main/Screenshots/index.png)
+![Phonebook Register/Login Screenshot](https://github.com/Mathesu-veLi/Projeto-Agenda/blob/main/Screenshots/register_login.png)
 ## Explain the project
 
 Parts of the code that I think are important to explain
@@ -80,4 +84,3 @@ To run this project, you will need to add the following environment variables to
 **Client:** Bootstrap 5
 
 **Server:** Node, Express
-
