@@ -1,11 +1,11 @@
-const Contato = require('../models/ContatoModel');
+const Contact = require('../models/ContactModel');
 
 exports.index = async (req, res) => {
     try {
-        contatos = await Contato.buscaContatos(req.session.user.email);
+        contacts = await Contact.searchContacts(req.session.user.email);
     } catch (e) {
-        contatos = await Contato.buscaContatos('');
+        contacts = await Contact.searchContacts('');
     }
-    
-    res.render('index', { contatos });
+
+    res.render('index', { contacts });
 };

@@ -4,7 +4,7 @@ const app = express();
 
 const mongoose = require('mongoose');
 mongoose.connect(process.env.CONNECTIONSTRING).then(() => {
-    app.emit('pronto');
+    app.emit('done');
 }).catch(e => console.log(e));
 
 const session = require('express-session');
@@ -41,9 +41,8 @@ app.use(middlewareGlobal);
 app.use(csrfMiddleware);
 app.use(routes);
 
-app.on('pronto', () => {
+app.on('done', () => {
     app.listen(3000, () => {
-        console.log('Acessar http://localhost:3000');
-        console.log('Servidor executando na porta 3000');
-    });    
+        console.log('Access http://localhost:3000');
+    });
 });

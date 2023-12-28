@@ -17,24 +17,24 @@ class Login {
   };
 
   async login() {
-    this.valida();
+    this.validate();
     if (this.errors.length > 0) return;
     this.user = await LoginModel.findOne({ email: this.body.email });
 
     if (!this.user) {
-      this.errors.push('Usuário não existe.');
+      this.errors.push('User does not exist.');
       return;
     }
 
     if (!bcryptjs.compareSync(this.body.password, this.user.password)) {
-      this.errors.push('Senha inválida');
+      this.errors.push('Invalid password');
       this.user = null;
       return;
     }
   }
 
   async register() {
-    this.valida();
+    this.validate();
     if (this.errors.length > 0) return;
 
     await this.userExists();
@@ -49,16 +49,16 @@ class Login {
 
   async userExists() {
     this.user = await LoginModel.findOne({ email: this.body.email });
-    if (this.user) this.errors.push('Usuário já existe.');
+    if (this.user) this.errors.push('User already exists.');
   }
 
-  valida() {
+  validate() {
     this.cleanUp();
 
-    if (!validator.isEmail(this.body.email)) this.errors.push('E-mail inválido');
+    if (!validator.isEmail(this.body.email)) this.errors.push('Invalid e-mail');
 
     if (this.body.password.length < 3 || this.body.password.length > 50) {
-      this.errors.push('A senha precisa ter entre 3 e 50 caracteres.');
+      this.errors.push('The password must be between 3 and 50 characters long.');
     }
   }
 
